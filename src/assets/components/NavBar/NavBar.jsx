@@ -18,6 +18,8 @@ import {
     Center,
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import CartWidget from '../CartWidget/CartWidget'
+
 
 export default function NavBar() {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -26,9 +28,9 @@ export default function NavBar() {
         <>
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-                    <Box>Diego Oroná</Box>
-
+                    <Box>DO</Box>
                     <Flex alignItems={'center'}>
+                    <CartWidget/>
                         <Stack direction={'row'} spacing={7}>
                             <Button onClick={toggleColorMode}>
                                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
@@ -43,7 +45,7 @@ export default function NavBar() {
                                     minW={0}>
                                     <Avatar
                                         size={'sm'}
-                                        src={'../../../../public/DiegoDev.png'}
+                                        src={'../../../../DiegoDev.png'}
                                     />
                                 </MenuButton>
                                 <MenuList alignItems={'center'}>
@@ -51,7 +53,7 @@ export default function NavBar() {
                                     <Center>
                                         <Avatar
                                             size={'2xl'}
-                                            src={'../../../../public/DiegoDev.png'}
+                                            src={'../../../../DiegoDev.png'}
                                         />
                                     </Center>
                                     <br />

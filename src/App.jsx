@@ -8,7 +8,7 @@ function App() {
     <>
     <ChakraProvider>
     <NavBar/>
-    <ItemListContainer/>
+    <ItemListContainer greeting="Saludos Terricola"/>
     </ChakraProvider>
     </>
   )

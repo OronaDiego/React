@@ -1,6 +1,16 @@
 import { Flex } from '@chakra-ui/react'
-const ItemListContainer = (prop)=>{
-    return <Flex justifyContent={"center"} margin={"50px"} fontSize={"30px"}>{prop.greeting}</Flex>
+import ItemCard from '../ItemCard/ItemCard';
+import { wrap } from 'framer-motion';
+
+
+const ItemListContainer = ({pro}) => {
+    return <Flex wrap={"wrap"}>
+        {pro.map((item)=>{
+            return(
+                <ItemCard key={item.id}  data={item}/>
+            )
+        })}
+    </Flex>
 };
 
 export default ItemListContainer;

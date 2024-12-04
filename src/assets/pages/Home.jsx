@@ -1,11 +1,10 @@
 import { Flex } from "@chakra-ui/react";
-import ItemListContainer from "../components/ItemListContainer/ItemListCointainer";
-import Loader from "../components/Loader/Loader";
 import { useGetAllProducts } from "../hooks/useGetAllProducts";
+import { Loader, ItemListContainer } from '../components'
 
 
 
-const Home = () => {
+export const Home = () => {
     
     const {loading, products} = useGetAllProducts();
 
@@ -24,4 +23,3 @@ const Home = () => {
     );
 
 }
-export default Home;

@@ -1,5 +1,3 @@
-'use client'
-
 import {
     Box,
     Flex,
@@ -18,10 +16,10 @@ import {
     Center,
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import CartWidget from '../CartWidget/CartWidget'
+import { CartWidget } from '../index'
 
 
-export default function NavBar() {
+export function NavBar() {
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (

@@ -2,7 +2,7 @@ import { IconButton } from '@chakra-ui/react';
 import { FaShoppingCart } from 'react-icons/fa';
 import { Flex } from '@chakra-ui/react';
 
-const CartWidge = () => {
+export const CartWidget = () => {
     return <Flex alignItems={"center"} margin={"10px"}>
 
         <IconButton
@@ -14,4 +14,3 @@ const CartWidge = () => {
         />23
     </Flex>
 }
-export default CartWidge;

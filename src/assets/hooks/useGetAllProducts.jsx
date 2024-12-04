@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { getAllProducts } from "../services/productServices"
+
 export const useGetAllProducts = ()=>{
     const [loading, setLoading] = useState(true)
     const [products, setProducts]= useState([])

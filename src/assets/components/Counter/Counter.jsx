@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Box, Button } from "@chakra-ui/react"
 
-const Counter = () => {
+export const Counter = () => {
 
     const [count, setCount] = useState(0)
     const handledRemove = () => {
@@ -18,4 +18,3 @@ const Counter = () => {
     </Box>
     )
 }
-export default Counter;

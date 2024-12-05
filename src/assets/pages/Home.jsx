@@ -8,12 +8,6 @@ export const Home = () => {
     
     const {loading, products} = useGetAllProducts();
 
-
-    // setTimeout(() => {
-    //     setLoading(false)
-    // }, 2000)
-
-
     return loading ? (
         <Loader />
     ) : (

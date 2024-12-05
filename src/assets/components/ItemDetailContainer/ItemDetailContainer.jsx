@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
     Box,
     chakra,
@@ -17,10 +18,18 @@ import {
     ListItem,
 } from '@chakra-ui/react'
 import { MdLocalShipping } from 'react-icons/md'
+import { FaHandPointLeft } from "react-icons/fa";
 
-export const ItemDetailContainer = () => {
+export const ItemDetailContainer = ({ product }) => {
+    console.log(product);
+
     return (
         <Container maxW={'7xl'}>
+            <Flex alignItems={"center"}>
+                <Link to="/">Volver al Home
+                    <FaHandPointLeft />
+                </Link>
+            </Flex>
             <SimpleGrid
                 columns={{ base: 1, lg: 2 }}
                 spacing={{ base: 8, md: 10 }}
@@ -30,7 +39,7 @@ export const ItemDetailContainer = () => {
                         rounded={'md'}
                         alt={'product image'}
                         src={
-                            'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080'
+                            product.thumbnail
                         }
                         fit={'cover'}
                         align={'center'}
@@ -44,13 +53,13 @@ export const ItemDetailContainer = () => {
                             lineHeight={1.1}
                             fontWeight={600}
                             fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-                            Automatic Watch
+                            {product.title}
                         </Heading>
                         <Text
                             color={useColorModeValue('gray.900', 'gray.400')}
                             fontWeight={300}
                             fontSize={'2xl'}>
-                            $350.00 USD
+                            {product.price}USD
                         </Text>
                     </Box>
 
@@ -65,13 +74,10 @@ export const ItemDetailContainer = () => {
                                 color={useColorModeValue('gray.500', 'gray.400')}
                                 fontSize={'2xl'}
                                 fontWeight={'300'}>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore
+                                {product.category}
                             </Text>
                             <Text fontSize={'lg'}>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet
-                                at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis
-                                porro, quae, quisquam quos reprehenderit velit? Natus, totam.
+                                {product.description}
                             </Text>
                         </VStack>
                         <Box>
@@ -86,14 +92,14 @@ export const ItemDetailContainer = () => {
 
                             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                                 <List spacing={2}>
-                                    <ListItem>Chronograph</ListItem>
-                                    <ListItem>Master Chronometer Certified</ListItem>{' '}
-                                    <ListItem>Tachymeter</ListItem>
+                                    <ListItem>{product.brand}</ListItem>
+                                    <ListItem>{product.sku}</ListItem>{' '}
+                                    <ListItem>{product.stock}</ListItem>
                                 </List>
                                 <List spacing={2}>
-                                    <ListItem>Anti‑magnetic</ListItem>
-                                    <ListItem>Chronometer</ListItem>
-                                    <ListItem>Small seconds</ListItem>
+                                    <ListItem>Brand</ListItem>
+                                    <ListItem>Sku</ListItem>
+                                    <ListItem>Stock</ListItem>
                                 </List>
                             </SimpleGrid>
                         </Box>
@@ -110,46 +116,27 @@ export const ItemDetailContainer = () => {
                             <List spacing={2}>
                                 <ListItem>
                                     <Text as={'span'} fontWeight={'bold'}>
-                                        Between lugs:
+                                        Width:
                                     </Text>{' '}
-                                    20 mm
+
                                 </ListItem>
                                 <ListItem>
                                     <Text as={'span'} fontWeight={'bold'}>
-                                        Bracelet:
+                                        Height:
                                     </Text>{' '}
-                                    leather strap
+
                                 </ListItem>
                                 <ListItem>
                                     <Text as={'span'} fontWeight={'bold'}>
-                                        Case:
+                                        Depth:
                                     </Text>{' '}
-                                    Steel
+
                                 </ListItem>
                                 <ListItem>
                                     <Text as={'span'} fontWeight={'bold'}>
-                                        Case diameter:
+                                        Warranty:
                                     </Text>{' '}
-                                    42 mm
-                                </ListItem>
-                                <ListItem>
-                                    <Text as={'span'} fontWeight={'bold'}>
-                                        Dial color:
-                                    </Text>{' '}
-                                    Black
-                                </ListItem>
-                                <ListItem>
-                                    <Text as={'span'} fontWeight={'bold'}>
-                                        Crystal:
-                                    </Text>{' '}
-                                    Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment
-                                    inside
-                                </ListItem>
-                                <ListItem>
-                                    <Text as={'span'} fontWeight={'bold'}>
-                                        Water resistance:
-                                    </Text>{' '}
-                                    5 bar (50 metres / 167 feet){' '}
+                                    {product.warrantyInformation}
                                 </ListItem>
                             </List>
                         </Box>
@@ -173,7 +160,7 @@ export const ItemDetailContainer = () => {
 
                     <Stack direction="row" alignItems="center" justifyContent={'center'}>
                         <MdLocalShipping />
-                        <Text>2-3 business days delivery</Text>
+                        <Text>{product.shippingInformation}</Text>
                     </Stack>
                 </Stack>
             </SimpleGrid>

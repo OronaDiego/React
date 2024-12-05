@@ -8,10 +8,11 @@ import {
     Icon,
     chakra,
     Tooltip,
+    Button,
 } from '@chakra-ui/react'
 import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs'
 import { FiShoppingCart } from 'react-icons/fi'
-
+import { Link } from 'react-router-dom'
 
 function Rating({ rating, numReviews }) {
     return (
@@ -41,11 +42,9 @@ function Rating({ rating, numReviews }) {
     )
 }
 
-
-
-
 export const ItemCard = ({ data }) => {
     return (
+    
         <Flex padding={"20px"} alignItems="center" justifyContent="center">
             <Box
                 bg={useColorModeValue('white', 'gray.800')}
@@ -77,16 +76,6 @@ export const ItemCard = ({ data }) => {
                             isTruncated>
                             {data.title}
                         </Box>
-                        <Tooltip
-                            label="Add to cart"
-                            bg="white"
-                            placement={'top'}
-                            color={'gray.800'}
-                            fontSize={'1.2em'}>
-                            <chakra.a href={'#'} display={'flex'}>
-                                <Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
-                            </chakra.a>
-                        </Tooltip>
                     </Flex>
 
                     <Flex justifyContent="space-between" alignContent="center">
@@ -97,6 +86,11 @@ export const ItemCard = ({ data }) => {
                             </Box>
                             {data.price.toFixed(2)}
                         </Box>
+                    </Flex>
+                    <Flex>
+                        <Link to={`/item/${data.id}`}>
+                        <Button>Detalle del producto</Button>
+                        </Link>
                     </Flex>
                 </Box>
             </Box>

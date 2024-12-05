@@ -1,9 +1,11 @@
-import { ItemDetailContainer } from "../components"
+import { useParams } from "react-router"
+import { ItemDetailContainer, Loader } from "../components"
+import { useGetproductByID } from "../hooks/useGetProductsById"
 
 
 export const Item = () => {
-    return (
-        <ItemDetailContainer/>
-    )
+    const {id} = useParams()
+    const {product, loading} = useGetproductByID(id)
+    return loading ? <Loader/> : <ItemDetailContainer product = {product}/>
 
 }

@@ -7,6 +7,6 @@ export async function getAllProducts(limit=30) {
 export async function getAllCategories(){
   return await axios.get('https://dummyjson.com/products/categories');
 }
-export async function gerProductById(id){
+export async function getProductById(id){
   return axios.get(`https://dummyjson.com/products/${id}`)
 }

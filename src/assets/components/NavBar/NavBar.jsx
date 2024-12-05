@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
     Box,
     Flex,
@@ -19,7 +20,6 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { CartWidget } from '../index'
 import { useGetAllCategories } from '../../hooks/useGetAllCategories'
 
-
 export function NavBar() {
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -28,7 +28,7 @@ export function NavBar() {
         <>
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-                    <Box>DO</Box>
+                    <Box><Link to="/">DO</Link></Box>
                             <Menu>
                                 <MenuButton as={Button} >
                                     Categorias

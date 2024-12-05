@@ -5,3 +5,4 @@ export * from './ItemCard/ItemCard';
 export * from './ItemListContainer/ItemListCointainer';
 export * from './Loader/Loader';
 export * from './NavBar/NavBar';
+export * from './ItemDetailContainer/ItemDetailContainer'

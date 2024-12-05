@@ -1,12 +1,9 @@
 import { Flex } from "@chakra-ui/react";
-import NavBar from "../components/NavBar/NavBar";
-import Footer from "../components/Footer/Footer";
+import { Footer } from "../components";
 
-
-const Layout = ({children})=>{
+export const Layout = ({children})=>{
     return(
         <Flex flexDirection={"column"} minHeight={"100vh"}>
-            <NavBar/>
             <Flex flex="1" flexDirection="column">
             {children} 
             </Flex>
@@ -14,4 +11,3 @@ const Layout = ({children})=>{
         </Flex>
     )
 }
-export default Layout;

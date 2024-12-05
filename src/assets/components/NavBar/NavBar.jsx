@@ -1,5 +1,4 @@
-'use client'
-
+import { Link } from 'react-router-dom';
 import {
     Box,
     Flex,
@@ -18,24 +17,38 @@ import {
     Center,
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import CartWidget from '../CartWidget/CartWidget'
+import { CartWidget } from '../index'
+import { useGetAllCategories } from '../../hooks/useGetAllCategories'
 
-
-export default function NavBar() {
+export function NavBar() {
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const {categories} = useGetAllCategories()
     return (
         <>
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-                    <Box>DO</Box>
+                    <Box><Link to="/">DO</Link></Box>
+                            <Menu>
+                                <MenuButton as={Button} >
+                                    Categorias
+                                </MenuButton>
+                                <MenuList height={'200px'} overflowY={'scroll'}>
+                                    {
+                                        categories.map((cat)=>{
+                                            return(
+                                                <MenuItem key={cat.slug}>{cat.name}</MenuItem>
+                                            )
+                                        })
+                                    }
+                                </MenuList>
+                            </Menu>
                     <Flex alignItems={'center'}>
-                    <CartWidget/>
+                        <CartWidget />
                         <Stack direction={'row'} spacing={7}>
                             <Button onClick={toggleColorMode}>
                                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                             </Button>
-
                             <Menu>
                                 <MenuButton
                                     as={Button}

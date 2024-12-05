@@ -1,9 +1,9 @@
 import { Flex } from '@chakra-ui/react'
-import ItemCard from '../ItemCard/ItemCard';
-import { wrap } from 'framer-motion';
+import { ItemCard } from '../index';
 
 
-const ItemListContainer = ({pro}) => {
+
+export const ItemListContainer = ({pro}) => {
     return <Flex wrap={"wrap"}>
         {pro.map((item)=>{
             return(
@@ -13,4 +13,3 @@ const ItemListContainer = ({pro}) => {
     </Flex>
 };
 
-export default ItemListContainer;

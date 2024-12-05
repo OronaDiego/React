@@ -44,7 +44,7 @@ function Rating({ rating, numReviews }) {
 
 
 
-const ItemCard = ({ data }) => {
+export const ItemCard = ({ data }) => {
     return (
         <Flex padding={"20px"} alignItems="center" justifyContent="center">
             <Box
@@ -104,4 +104,3 @@ const ItemCard = ({ data }) => {
     )
 }
 
-export default ItemCard

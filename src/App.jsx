@@ -1,7 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/icons'
 import { React } from 'react'
-import { Layout } from './assets/layouts/Layout'
-import { PublicRouter } from './assets/router'
+import { Layout } from './layouts/Layout'
+import { PublicRouter } from './router'
 function App() {
   return (
     <>

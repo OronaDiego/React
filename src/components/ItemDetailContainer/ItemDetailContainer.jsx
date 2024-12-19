@@ -26,7 +26,7 @@ export const ItemDetailContainer = ({ product }) => {
     return (
         <Container maxW={'7xl'}>
             <Flex alignItems={"center"}>
-                <Link to="/">Volver al Home
+                <Link to="/productos">Volver a productos
                     <FaHandPointLeft />
                 </Link>
             </Flex>

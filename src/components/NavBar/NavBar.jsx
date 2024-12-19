@@ -3,14 +3,12 @@ import {
     Box,
     Flex,
     Avatar,
-    Text,
     Button,
     Menu,
     MenuButton,
     MenuList,
     MenuItem,
     MenuDivider,
-    useDisclosure,
     useColorModeValue,
     Stack,
     useColorMode,
@@ -22,13 +20,13 @@ import { useGetAllCategories } from '../../hooks/useGetAllCategories'
 
 export function NavBar() {
     const { colorMode, toggleColorMode } = useColorMode()
-    const { isOpen, onOpen, onClose } = useDisclosure()
     const {categories} = useGetAllCategories()
     return (
         <>
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-                    <Box><Link to="/">DO</Link></Box>
+                    <Box><Link to="/">ImporTienda</Link></Box>
+                    <Box><Link to="/productos">Productos</Link></Box>
                             <Menu>
                                 <MenuButton as={Button} >
                                     Categorias

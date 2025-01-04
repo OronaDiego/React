@@ -56,17 +56,14 @@ export function Footer() {
                 align={'center'}>
                 <Logo />
                 <Stack direction={'row'} spacing={6}>
-                    <Box as="a" href={'#'}>
+                    <Box>
                         Home
                     </Box>
-                    <Box as="a" href={'#'}>
-                        About
+                    <Box>
+                        Productos
                     </Box>
-                    <Box as="a" href={'#'}>
-                        Blog
-                    </Box>
-                    <Box as="a" href={'#'}>
-                        Contact
+                    <Box>
+                        Contactos
                     </Box>
                 </Stack>
             </Container>

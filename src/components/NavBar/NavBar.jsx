@@ -34,6 +34,9 @@ export const NavBar = () => {
           <Box>
             <Link to="/">ImporTienda</Link>
           </Box>
+          <Box>
+            <Link to="/productos">Productos</Link>
+          </Box>
 
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>

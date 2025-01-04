@@ -4,3 +4,4 @@ export * from "./Category";
 export * from "./NotFound";
 export * from "./CheckOut"
 export * from "./Payment"
+export * from "./Productos"

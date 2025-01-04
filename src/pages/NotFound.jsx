@@ -1,15 +1,19 @@
-import { Flex, Heading, Text, Button } from "@chakra-ui/react"
-
+import React from "react";
+import { Flex, Heading, Text, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export const NotFound = () => {
   return (
-    <Flex alignItems={"center"} justifyContent={"center"} flexDirection={"Column"}>
-        <Heading>
-            404 Not Found
-        </Heading>
-        <Text>Pagina no encontrada</Text>
-        <Button>Volver al Home</Button>
+    <Flex
+      alignItems={"center"}
+      justifyContent={"center"}
+      flexDirection={"column"}
+    >
+      <Heading>404 NotFound</Heading>
+      <Text>Parece que no encotramos la pagina solicitada</Text>
+      <Link to="/">
+      <Button>Volver al Home</Button>
+      </Link>
     </Flex>
-  )
-}
-
+  );
+};

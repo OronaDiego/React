@@ -1,17 +1,19 @@
-import { ChakraProvider } from '@chakra-ui/icons'
-import { React } from 'react'
-import { Layout } from './layouts/Layout'
-import { PublicRouter } from './router'
+import { ChakraProvider } from "@chakra-ui/react";
+import { Layout } from "./layouts";
+import { PublicRouter } from "./router";
+import { CartProvider } from "./context";
+//SOLID --> Single Responsability
+
 function App() {
   return (
-    <>
-    <ChakraProvider>
-    <Layout>
-      <PublicRouter/>
-    </Layout>
-    </ChakraProvider>
-    </>
-  )
+    <CartProvider>
+      <ChakraProvider>
+        <Layout>
+          <PublicRouter />
+        </Layout>
+      </ChakraProvider>
+    </CartProvider>
+  );
 }
 
-export default App
+export default App;

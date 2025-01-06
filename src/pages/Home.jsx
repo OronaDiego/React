@@ -40,8 +40,8 @@ export const Home = () => {
               Nunca fue tan facil
             </Text>
           </Heading>
-          <Text color={'gray.500'}>
-            Importa productos desde cualquier parte con solo un click, elejis el producto y nosotros nos encargamos del resto
+          <Text color={'white.500'}>
+            Importá productos desde cualquier parte con solo un click, elejis el producto y nosotros nos encargamos del resto
           </Text>
           <Stack
             direction={'column'}
@@ -63,9 +63,11 @@ export const Home = () => {
                 Productos
               </Button>
             </Link>
-            <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-              Leer mas
-            </Button>
+            <Link to="/import">
+              <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
+                Leer mas
+              </Button>
+            </Link>
           </Stack>
         </Stack>
       </Container>

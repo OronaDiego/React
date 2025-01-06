@@ -4,8 +4,10 @@ import { Footer } from "../components";
 export const Layout = ({ children }) => {
   return (
     <Flex flexDirection={"column"} minHeight={"100vh"}>
-      {children}
-      <Footer/>
+      <Flex as="main" flex="1" flexDirection="column">
+        {children}
+      </Flex>
+      <Footer />
     </Flex>
   );
 };

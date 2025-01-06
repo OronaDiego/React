@@ -16,10 +16,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, ChevronDownIcon } from "@chakra-ui/icons";
-
 import { useGetAllProducts } from "../../hooks/useGetAllProducts";
-
-
 import { CartWidget } from "../index";
 
 export const NavBar = () => {
@@ -55,7 +52,6 @@ export const NavBar = () => {
               })}
             </MenuList>
           </Menu>
-
           <Flex alignItems={"center"}>
             <CartWidget />
             <Stack direction={"row"} spacing={7}>

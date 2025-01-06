@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Category, Productos ,Payment , CheckOut , Home, Item, NotFound,  } from "../pages";
+import { Category,Productos ,Payment , CheckOut , Home, Item, NotFound, Import,  } from "../pages";
 import { NavBar } from "../components";
 
 
@@ -16,6 +16,7 @@ export const PublicRouter = () => {
         <Route exact path="/checkout" element={<CheckOut />} />
         <Route exact path="/payment" element={<Payment />} />
         <Route exact path="/productos" element={<Productos/>} />
+        <Route exact path="/import" element={<Import/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

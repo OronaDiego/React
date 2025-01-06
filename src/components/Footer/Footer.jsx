@@ -11,7 +11,7 @@ import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 const Logo = () => {
     return <Box>
-      Diego Oroná
+      Import Tienda
     </Box>
 }
 

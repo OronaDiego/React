@@ -114,7 +114,7 @@ export const CheckOut = () => {
                         </Text>
                         <Spacer />
                     </Flex>
-                    <Button onClick={handleNavigatePayment}>Comprar</Button>
+                    <Button onClick={handleNavigatePayment} mb={4}>Comprar</Button>
                 </VStack>
             )}
         </Box>

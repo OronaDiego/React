@@ -29,7 +29,7 @@ export const NavBar = () => {
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
-            <Link to="/">ImporTienda</Link>
+            <Link to="/">ImporTainer</Link>
           </Box>
           <Box>
             <Link to="/productos">Productos</Link>

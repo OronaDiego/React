@@ -105,10 +105,6 @@ src/
   - Incorporar **TailwindCSS** para mayor flexibilidad.
   - Integrar animaciones y transiciones personalizadas.
 
-### Vista Previa
-![ImporTainer en acción](https://media.giphy.com/media/3o6MbnP2PYDzRT0jlO/giphy.gif)
-
----
 
 ## 🔮 **Futuras Mejoras**
 - Implementar pasarela de pago.
